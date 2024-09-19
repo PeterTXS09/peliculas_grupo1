@@ -50,12 +50,12 @@
                     {% for pelicula in data %}
                     <tr>
                         <td>{{loop.index}}</td>
-                        <td>{{pelicula[0]}}</td>
-                        <td>{{pelicula[1]}}</td>
-                        <td>{{pelicula[2]}}</td>
+                        <td>{{pelicula['nombre']}}</td>
+                        <td>{{pelicula['duracion']}}</td>
+                        <td>{{pelicula['genero']}}</td>
                         <td>
                             <form method="POST" action="./eliminar" style="display: inline">
-                              <input type="hidden" value="{{pelicula[0]}}" name="nombre">
+                              <input type="hidden" value="{{pelicula['nombre']}}" name="nombre">
                               <input type="submit" value="Eliminar">
                             </form>
                         </td>
